@@ -1,0 +1,118 @@
+
+body {
+    background-color: #f2f2f2; /* Cor de fundo */
+    background-image: linear-gradient(to bottom, lightblue, #f2f2f2); /* Gradiente de cores */
+    background-attachment: fixed; /* Fixar o fundo para evitar rolagem */
+  }
+  
+/* Estilos para o menu e conteúdo principal */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    height: 60px;
+    border-radius: 15px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: lightblue;
+    padding: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .menu a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: lightblue;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  .menu a:hover:before {
+    transform: scaleX(1);
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+  
+  .menu li:hover .submenu {
+    display: block;
+  }
+  
+  .submenu a {
+    display: block;
+    color: lightblue;
+    text-decoration: none;
+    padding: 2px;
+  }
+  
+  /* Estilos da div content, */
+
+  .content {
+    margin: 5px;
+    padding: 350px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 1px;
+  }
+  .content {
+    opacity: 0.7; /* Valor de opacidade (0 a 1) */
+  }
+  @keyframes example-animation {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+  }
+  
+  .animation {
+    animation-name: example-animation;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+
+  /* Estilos para o rodapé */
+
+.footer {
+    background-color: #333;
+    color:lightblue;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+  }
