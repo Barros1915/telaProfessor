@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" href="book.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 1: Automação de Email - Curso n8n</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="index.html"><i class="fas fa-home" style="font-size:25px;color:lightblue;"></i> Início</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-play-circle" style="font-size:25px;color:lightblue;"></i> Módulo 1: Fundamentos</a>
+        <ul class="submenu"> 
+          <li><a href="modulo1-intro.html"><i class="fas fa-info-circle"></i> Introdução ao n8n</a></li>
+          <li><a href="modulo1-instalacao.html"><i class="fas fa-download"></i> Instalação</a></li>
+          <li><a href="modulo1-interface.html"><i class="fas fa-desktop"></i> Interface do n8n</a></li>
+          <li><a href="modulo1-conceitos.html"><i class="fas fa-lightbulb"></i> Conceitos Básicos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-cogs" style="font-size:25px;color:lightblue;"></i> Módulo 2: Workflows</a>
+        <ul class="submenu">
+          <li><a href="modulo2-primeiro-workflow.html"><i class="fas fa-plus"></i> Primeiro Workflow</a></li>
+          <li><a href="modulo2-nodes.html"><i class="fas fa-puzzle-piece"></i> Nodes Essenciais</a></li>
+          <li><a href="modulo2-conectores.html"><i class="fas fa-link"></i> Conectores</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-code" style="font-size:25px;color:lightblue;"></i> Módulo 3: Avançado</a>
+        <ul class="submenu">
+          <li><a href="modulo3-javascript.html"><i class="fab fa-js"></i> JavaScript no n8n</a></li>
+          <li><a href="modulo3-apis.html"><i class="fas fa-exchange-alt"></i> APIs e Webhooks</a></li>
+          <li><a href="modulo3-condicionais.html"><i class="fas fa-code-branch"></i> Lógica Condicional</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-project-diagram" style="font-size:25px;color:lightblue;"></i> Módulo 4: Projetos</a>
+        <ul class="submenu">
+          <li><a href="projeto1.html" class="active"><i class="fas fa-envelope"></i> Automação de Email</a></li>
+          <li><a href="projeto2.html"><i class="fas fa-share-alt"></i> Integração Redes Sociais</a></li>
+          <li><a href="projeto3.html"><i class="fas fa-database"></i> Sincronização de Dados</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="recursos.html"><i class="fas fa-download" style="font-size:25px;color:lightblue;"></i> Recursos</a>
+      </li>
+      <li>
+        <a href="certificado.html"><i class="fas fa-certificate" style="font-size:25px;color:lightblue;"></i> Certificado</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="lesson-container">
+    <div class="lesson-sidebar">
+      <div class="project-info">
+        <h4><i class="fas fa-info-circle"></i> Informações do Projeto</h4>
+        <div class="project-details">
+          <div class="detail">
+            <i class="fas fa-clock"></i>
+            <span>Duração: 3-4 horas</span>
+          </div>
+          <div class="detail">
+            <i class="fas fa-signal"></i>
+            <span>Nível: Intermediário</span>
+          </div>
+          <div class="detail">
+            <i class="fas fa-tools"></i>
+            <span>Ferramentas: Gmail, Sheets, n8n</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-steps">
+        <h4><i class="fas fa-list-ol"></i> Etapas do Projeto</h4>
+        <ul class="steps-list">
+          <li class="step-item current">
+            <i class="fas fa-play-circle"></i>
+            <span>Planejamento</span>
+          </li>
+          <li class="step-item">
+            <i class="fas fa-cog"></i>
+            <span>Configuração</span>
+          </li>
+          <li class="step-item">
+            <i class="fas fa-code"></i>
+            <span>Desenvolvimento</span>
+          </li>
+          <li class="step-item">
+            <i class="fas fa-test-tube"></i>
+            <span>Testes</span>
+          </li>
+          <li class="step-item">
+            <i class="fas fa-rocket"></i>
+            <span>Deploy</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-content">
+      <div class="lesson-header">
+        <div class="lesson-meta">
+          <span class="lesson-module">Módulo 4: Projetos Práticos</span>
+          <span class="lesson-duration"><i class="fas fa-clock"></i> 3-4 horas</span>
+        </div>
+        <h1><i class="fas fa-envelope"></i> Projeto 1: Sistema de Automação de Email Marketing</h1>
+        <p class="lesson-description">Construa um sistema completo de automação de email marketing que segmenta leads, envia campanhas personalizadas e rastreia resultados automaticamente.</p>
+      </div>
+
+      <div class="lesson-body">
+        <section class="lesson-section">
+          <h2><i class="fas fa-bullseye"></i> Objetivos do Projeto</h2>
+          <div class="objectives-grid">
+            <div class="objective">
+              <i class="fas fa-users"></i>
+              <h4>Segmentação Automática</h4>
+              <p>Classificar leads automaticamente com base em comportamento e dados demográficos</p>
+            </div>
+            <div class="objective">
+              <i class="fas fa-paper-plane"></i>
+              <h4>Campanhas Personalizadas</h4>
+              <p>Enviar emails personalizados baseados no segmento do usuário</p>
+            </div>
+            <div class="objective">
+              <i class="fas fa-chart-line"></i>
+              <h4>Rastreamento de Métricas</h4>
+              <p>Monitorar taxas de abertura, cliques e conversões automaticamente</p>
+            </div>
+            <div class="objective">
+              <i class="fas fa-sync"></i>
+              <h4>Sincronização de Dados</h4>
+              <p>Manter CRM e planilhas sempre atualizados</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-sitemap"></i> Arquitetura do Sistema</h2>
+          <div class="architecture-diagram">
+            <div class="flow-step">
+              <div class="flow-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <h4>Novo Lead</h4>
+              <p>Formulário de cadastro ou importação</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">
+                <i class="fas fa-filter"></i>
+              </div>
+              <h4>Segmentação</h4>
+              <p>Classificação automática por critérios</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h4>Email Personalizado</h4>
+              <p>Envio baseado no segmento</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h4>Tracking</h4>
+              <p>Monitoramento de métricas</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-list-check"></i> Pré-requisitos</h2>
+          <div class="prerequisites">
+            <div class="prereq-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Conhecimento básico de n8n (Módulos 1-3 concluídos)</span>
+            </div>
+            <div class="prereq-item">
+              <i class="fas fa-envelope"></i>
+              <span>Conta Gmail ou outro provedor de email</span>
+            </div>
+            <div class="prereq-item">
+              <i class="fas fa-table"></i>
+              <span>Conta Google Sheets ou Excel Online</span>
+            </div>
+            <div class="prereq-item">
+              <i class="fas fa-key"></i>
+              <span>API keys dos serviços que serão integrados</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-hammer"></i> Ferramentas Necessárias</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <i class="fas fa-robot"></i>
+              <h4>n8n</h4>
+              <p>Plataforma principal de automação</p>
+              <span class="tool-status required">Obrigatório</span>
+            </div>
+            <div class="tool-card">
+              <i class="fab fa-google"></i>
+              <h4>Gmail API</h4>
+              <p>Para envio de emails</p>
+              <span class="tool-status required">Obrigatório</span>
+            </div>
+            <div class="tool-card">
+              <i class="fas fa-table"></i>
+              <h4>Google Sheets</h4>
+              <p>Armazenamento de dados</p>
+              <span class="tool-status required">Obrigatório</span>
+            </div>
+            <div class="tool-card">
+              <i class="fas fa-chart-line"></i>
+              <h4>Google Analytics</h4>
+              <p>Tracking avançado</p>
+              <span class="tool-status optional">Opcional</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-road"></i> Roadmap do Projeto</h2>
+          
+          <div class="roadmap">
+            <div class="roadmap-phase">
+              <div class="phase-header">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>Fase 1: Planejamento e Setup (30 min)</h3>
+              </div>
+              <div class="phase-tasks">
+                <div class="task">
+                  <input type="checkbox" id="task1">
+                  <label for="task1">Definir critérios de segmentação</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task2">
+                  <label for="task2">Configurar APIs necessárias</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task3">
+                  <label for="task3">Preparar templates de email</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task4">
+                  <label for="task4">Estruturar planilha de dados</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="phase-header">
+                <i class="fas fa-plus-circle"></i>
+                <h3>Fase 2: Criação do Workflow Base (45 min)</h3>
+              </div>
+              <div class="phase-tasks">
+                <div class="task">
+                  <input type="checkbox" id="task5">
+                  <label for="task5">Criar trigger para novos leads</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task6">
+                  <label for="task6">Implementar lógica de segmentação</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task7">
+                  <label for="task7">Configurar node de email</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task8">
+                  <label for="task8">Testar fluxo básico</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="phase-header">
+                <i class="fas fa-magic"></i>
+                <h3>Fase 3: Personalização Avançada (60 min)</h3>
+              </div>
+              <div class="phase-tasks">
+                <div class="task">
+                  <input type="checkbox" id="task9">
+                  <label for="task9">Implementar templates dinâmicos</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task10">
+                  <label for="task10">Adicionar condicionais avançadas</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task11">
+                  <label for="task11">Configurar follow-up automático</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task12">
+                  <label for="task12">Implementar A/B testing</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="phase-header">
+                <i class="fas fa-chart-line"></i>
+                <h3>Fase 4: Monitoramento e Otimização (45 min)</h3>
+              </div>
+              <div class="phase-tasks">
+                <div class="task">
+                  <input type="checkbox" id="task13">
+                  <label for="task13">Configurar tracking de métricas</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task14">
+                  <label for="task14">Criar dashboard de resultados</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task15">
+                  <label for="task15">Implementar alertas automáticos</label>
+                </div>
+                <div class="task">
+                  <input type="checkbox" id="task16">
+                  <label for="task16">Documentar o workflow</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-code"></i> Exemplo de Workflow</h2>
+          <p>Aqui está um exemplo simplificado do workflow que você irá construir:</p>
+          
+          <div class="workflow-preview">
+            <div class="workflow-node trigger">
+              <i class="fas fa-play"></i>
+              <span>Webhook Trigger</span>
+              <small>Recebe novos leads</small>
+            </div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-node">
+              <i class="fas fa-table"></i>
+              <span>Google Sheets</span>
+              <small>Salva dados do lead</small>
+            </div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-node">
+              <i class="fas fa-code"></i>
+              <span>Function</span>
+              <small>Segmenta o lead</small>
+            </div>
+            <div class="workflow-arrow">↓</div>
+            <div class="workflow-node condition">
+              <i class="fas fa-question-circle"></i>
+              <span>IF Condition</span>
+              <small>Verifica segmento</small>
+            </div>
+            <div class="workflow-branches">
+              <div class="branch">
+                <div class="workflow-arrow">↓</div>
+                <div class="workflow-node">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email - Iniciante</span>
+                  <small>Template para novatos</small>
+                </div>
+              </div>
+              <div class="branch">
+                <div class="workflow-arrow">↓</div>
+                <div class="workflow-node">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email - Avançado</span>
+                  <small>Template para experts</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-download"></i> Recursos do Projeto</h2>
+          <div class="project-resources">
+            <div class="resource-download">
+              <i class="fas fa-file-code"></i>
+              <div>
+                <h4>Template do Workflow</h4>
+                <p>Arquivo JSON com o workflow base para importar no n8n</p>
+              </div>
+              <button class="download-btn" onclick="downloadResource('workflow-template')">
+                <i class="fas fa-download"></i>
+              </button>
+            </div>
+            <div class="resource-download">
+              <i class="fas fa-file-excel"></i>
+              <div>
+                <h4>Planilha de Dados</h4>
+                <p>Template da planilha Google Sheets com dados de exemplo</p>
+              </div>
+              <button class="download-btn" onclick="downloadResource('spreadsheet-template')">
+                <i class="fas fa-download"></i>
+              </button>
+            </div>
+            <div class="resource-download">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Templates de Email</h4>
+                <p>HTML dos templates de email para diferentes segmentos</p>
+              </div>
+              <button class="download-btn" onclick="downloadResource('email-templates')">
+                <i class="fas fa-download"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-play"></i> Vamos Começar!</h2>
+          <div class="start-project">
+            <p>Pronto para construir seu primeiro sistema de automação de email marketing? Siga o passo a passo detalhado e construa um workflow profissional.</p>
+            
+            <div class="project-actions">
+              <button class="btn-start-project" onclick="startProject()">
+                <i class="fas fa-rocket"></i>
+                Iniciar Projeto
+              </button>
+              <button class="btn-download-resources" onclick="downloadAllResources()">
+                <i class="fas fa-download"></i>
+                Baixar Recursos
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="lesson-navigation-buttons">
+          <a href="modulo3-condicionais.html" class="btn-prev"><i class="fas fa-arrow-left"></i> Módulo Anterior</a>
+          <a href="projeto2.html" class="btn-next">Próximo Projeto: Redes Sociais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><i class="fas fa-graduation-cap"></i> Curso n8n - Automação Profissional | Projeto 1 de 3</p>
+  </div>
+
+  <script>
+    function downloadResource(resourceType) {
+      const button = event.target.closest('.download-btn');
+      const originalHTML = button.innerHTML;
+      
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        button.style.background = '#28a745';
+        
+        setTimeout(() => {
+          button.innerHTML = originalHTML;
+          button.style.background = '';
+          button.disabled = false;
+        }, 2000);
+      }, 1000);
+    }
+
+    function startProject() {
+      const button = event.target;
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparando...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        // Simulate opening project workspace
+        alert('Projeto iniciado! Siga as instruções detalhadas que aparecerão.');
+        button.innerHTML = '<i class="fas fa-check"></i> Projeto Ativo';
+        button.style.background = '#28a745';
+      }, 2000);
+    }
+
+    function downloadAllResources() {
+      const button = event.target;
+      const originalHTML = button.innerHTML;
+      
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Baixando...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        button.innerHTML = '<i class="fas fa-check"></i> Baixado!';
+        button.style.background = '#28a745';
+        
+        setTimeout(() => {
+          button.innerHTML = originalHTML;
+          button.style.background = '';
+          button.disabled = false;
+        }, 2000);
+      }, 2000);
+    }
+
+    // Update step progress
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkboxes = document.querySelectorAll('.task input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateProgress);
+      });
+    });
+
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('.task input[type="checkbox"]');
+      const completed = document.querySelectorAll('.task input[type="checkbox"]:checked').length;
+      const total = checkboxes.length;
+      const percentage = (completed / total) * 100;
+      
+      // Update step indicators
+      const steps = document.querySelectorAll('.step-item');
+      const currentPhase = Math.floor((completed / total) * steps.length);
+      
+      steps.forEach((step, index) => {
+        step.classList.remove('current', 'completed');
+        if (index < currentPhase) {
+          step.classList.add('completed');
+        } else if (index === currentPhase) {
+          step.classList.add('current');
+        }
+      });
+    }
+  </script>
+
+  <style>
+    .project-info {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .project-info h4 {
+      color: #1976d2;
+      margin-bottom: 15px;
+    }
+
+    .project-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .detail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #333;
+      font-size: 0.95em;
+    }
+
+    .detail i {
+      color: #1976d2;
+      width: 16px;
+    }
+
+    .project-steps {
+      margin-bottom: 25px;
+    }
+
+    .project-steps h4 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      color: #6c757d;
+    }
+
+    .step-item.current {
+      background: #667eea;
+      color: white;
+    }
+
+    .step-item.completed {
+      background: #28a745;
+      color: white;
+    }
+
+    .step-item i {
+      width: 16px;
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .objective {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .objective:hover {
+      border-color: #667eea;
+      transform: translateY(-5px);
+    }
+
+    .objective i {
+      font-size: 2.5em;
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+
+    .objective h4 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .objective p {
+      color: #666;
+      font-size: 0.95em;
+      margin: 0;
+    }
+
+    .architecture-diagram {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 15px;
+    }
+
+    .flow-step {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      min-width: 150px;
+    }
+
+    .flow-icon {
+      width: 60px;
+      height: 60px;
+      background: #667eea;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      margin: 0 auto 15px;
+    }
+
+    .flow-step h4 {
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 1em;
+    }
+
+    .flow-step p {
+      color: #666;
+      font-size: 0.9em;
+      margin: 0;
+    }
+
+    .flow-arrow {
+      font-size: 2em;
+      color: #667eea;
+      font-weight: bold;
+    }
+
+    .prerequisites {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 25px 0;
+    }
+
+    .prereq-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .prereq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .prereq-item i {
+      color: #28a745;
+      font-size: 1.2em;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .tool-card {
+      background: white;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .tool-card:hover {
+      border-color: #667eea;
+      transform: translateY(-3px);
+    }
+
+    .tool-card i {
+      font-size: 2.5em;
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+
+    .tool-card h4 {
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .tool-card p {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    .tool-status {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+
+    .tool-status.required {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .tool-status.optional {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .roadmap {
+      margin: 30px 0;
+    }
+
+    .roadmap-phase {
+      background: white;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .phase-header {
+      background: #667eea;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .phase-header i {
+      font-size: 1.5em;
+    }
+
+    .phase-header h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .phase-tasks {
+      padding: 25px;
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f3f4;
+    }
+
+    .task:last-child {
+      border-bottom: none;
+    }
+
+    .task input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #667eea;
+    }
+
+    .task label {
+      color: #333;
+      font-size: 1.05em;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .task input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color: #6c757d;
+    }
+
+    .workflow-preview {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 40px;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .workflow-node {
+      background: white;
+      border: 2px solid #667eea;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .workflow-node.trigger {
+      border-color: #28a745;
+    }
+
+    .workflow-node.condition {
+      border-color: #ffc107;
+    }
+
+    .workflow-node i {
+      font-size: 2em;
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .workflow-node.trigger i {
+      color: #28a745;
+    }
+
+    .workflow-node.condition i {
+      color: #ffc107;
+    }
+
+    .workflow-node span {
+      display: block;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .workflow-node small {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .workflow-arrow {
+      font-size: 2em;
+      color: #667eea;
+      margin: 10px 0;
+    }
+
+    .workflow-branches {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .branch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-resources {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .resource-download {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .resource-download:hover {
+      background: #e9ecef;
+      transform: translateX(10px);
+    }
+
+    .resource-download i {
+      font-size: 2em;
+      color: #667eea;
+      min-width: 50px;
+    }
+
+    .resource-download h4 {
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .resource-download p {
+      color: #666;
+      margin: 0;
+      font-size: 0.95em;
+    }
+
+    .start-project {
+      background: linear-gradient(135deg, #28a745, #20c997);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .start-project p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .project-actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-start-project,
+    .btn-download-resources {
+      background: white;
+      color: #28a745;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1em;
+    }
+
+    .btn-start-project:hover,
+    .btn-download-resources:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-start-project:disabled,
+    .btn-download-resources:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .architecture-diagram {
+        flex-direction: column;
+      }
+
+      .workflow-branches {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+
+      .workflow-branches .flow-arrow {
+        transform: none;
+      }
+
+      .objectives-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .project-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-start-project,
+      .btn-download-resources {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</body>
+</html>
