@@ -79,30 +79,212 @@ body {
     padding: 2px;
   }
   
-  /* Estilos da div content, */
+  /* Estilos da div content */
 
   .content {
-    margin: 5px;
-    padding: 350px;
+    margin: 20px;
+    padding: 40px;
     background-color: #ffffff;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-left: 2px;
-    margin-right: 1px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .content {
-    opacity: 0.7; /* Valor de opacidade (0 a 1) */
+
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
   }
-  @keyframes example-animation {
-    0% { transform: rotateY(0deg); }
-    100% { transform: rotateY(360deg); }
+
+  .hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: bold;
   }
-  
-  .animation {
-    animation-name: example-animation;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+
+  .hero-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .hero-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  /* Course Stats */
+  .course-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+
+  .stat i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .stat span {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+  }
+
+  .stat small {
+    font-size: 0.9em;
+    opacity: 0.8;
+  }
+
+  /* Modules Overview */
+  .modules-overview h3 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .module-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .module-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .module-header i {
+    font-size: 1.5em;
+    color: #667eea;
+    margin-right: 15px;
+  }
+
+  .module-header h4 {
+    flex-grow: 1;
+    color: #333;
+    font-size: 1.3em;
+    margin: 0;
+  }
+
+  .duration {
+    background: #667eea;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+  .module-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .module-topics li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 1.1em;
+  }
+
+  .module-topics li i {
+    color: #28a745;
+    margin-right: 10px;
+  }
+
+  /* Call to Action */
+  .call-to-action {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+
+  .call-to-action h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+
+  .btn-start {
+    display: inline-block;
+    background: white;
+    color: #28a745;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content {
+      margin: 10px;
+      padding: 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 2em;
+    }
+
+    .course-stats {
+      gap: 20px;
+    }
+
+    .stat {
+      padding: 15px;
+    }
+
+    .module-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
   }
   
 

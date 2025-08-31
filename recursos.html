@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" href="book.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos - Curso n8n</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="index.html"><i class="fas fa-home" style="font-size:25px;color:lightblue;"></i> Início</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-play-circle" style="font-size:25px;color:lightblue;"></i> Módulo 1: Fundamentos</a>
+        <ul class="submenu"> 
+          <li><a href="modulo1-intro.html"><i class="fas fa-info-circle"></i> Introdução ao n8n</a></li>
+          <li><a href="modulo1-instalacao.html"><i class="fas fa-download"></i> Instalação</a></li>
+          <li><a href="modulo1-interface.html"><i class="fas fa-desktop"></i> Interface do n8n</a></li>
+          <li><a href="modulo1-conceitos.html"><i class="fas fa-lightbulb"></i> Conceitos Básicos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-cogs" style="font-size:25px;color:lightblue;"></i> Módulo 2: Workflows</a>
+        <ul class="submenu">
+          <li><a href="modulo2-primeiro-workflow.html"><i class="fas fa-plus"></i> Primeiro Workflow</a></li>
+          <li><a href="modulo2-nodes.html"><i class="fas fa-puzzle-piece"></i> Nodes Essenciais</a></li>
+          <li><a href="modulo2-conectores.html"><i class="fas fa-link"></i> Conectores</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-code" style="font-size:25px;color:lightblue;"></i> Módulo 3: Avançado</a>
+        <ul class="submenu">
+          <li><a href="modulo3-javascript.html"><i class="fab fa-js"></i> JavaScript no n8n</a></li>
+          <li><a href="modulo3-apis.html"><i class="fas fa-exchange-alt"></i> APIs e Webhooks</a></li>
+          <li><a href="modulo3-condicionais.html"><i class="fas fa-code-branch"></i> Lógica Condicional</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-project-diagram" style="font-size:25px;color:lightblue;"></i> Módulo 4: Projetos</a>
+        <ul class="submenu">
+          <li><a href="projeto1.html"><i class="fas fa-envelope"></i> Automação de Email</a></li>
+          <li><a href="projeto2.html"><i class="fas fa-share-alt"></i> Integração Redes Sociais</a></li>
+          <li><a href="projeto3.html"><i class="fas fa-database"></i> Sincronização de Dados</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="recursos.html" class="active"><i class="fas fa-download" style="font-size:25px;color:lightblue;"></i> Recursos</a>
+      </li>
+      <li>
+        <a href="certificado.html"><i class="fas fa-certificate" style="font-size:25px;color:lightblue;"></i> Certificado</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="hero-section">
+      <h1><i class="fas fa-download"></i> Recursos do Curso</h1>
+      <h2>Materiais de Apoio e Downloads</h2>
+      <p class="hero-description">Acesse todos os recursos complementares, templates, exemplos de código e materiais de referência do curso.</p>
+    </div>
+
+    <div class="resources-grid">
+      <div class="resource-category">
+        <div class="category-header">
+          <i class="fas fa-file-code"></i>
+          <h3>Templates e Workflows</h3>
+        </div>
+        <div class="resource-list">
+          <div class="resource-item">
+            <i class="fas fa-envelope"></i>
+            <div class="resource-info">
+              <h4>Template: Automação de Email Marketing</h4>
+              <p>Workflow completo para automação de campanhas de email com segmentação.</p>
+              <span class="file-type">JSON • 2.3 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('email-template')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-share-alt"></i>
+            <div class="resource-info">
+              <h4>Template: Publicação em Redes Sociais</h4>
+              <p>Automatize postagens simultâneas em múltiplas redes sociais.</p>
+              <span class="file-type">JSON • 1.8 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('social-template')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-database"></i>
+            <div class="resource-info">
+              <h4>Template: Sincronização de Dados</h4>
+              <p>Mantenha dados sincronizados entre CRM, planilhas e banco de dados.</p>
+              <span class="file-type">JSON • 3.1 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('sync-template')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-chart-line"></i>
+            <div class="resource-info">
+              <h4>Template: Dashboard de Monitoramento</h4>
+              <p>Monitore métricas e KPIs com relatórios automáticos.</p>
+              <span class="file-type">JSON • 2.7 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('dashboard-template')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-category">
+        <div class="category-header">
+          <i class="fas fa-code"></i>
+          <h3>Códigos e Scripts</h3>
+        </div>
+        <div class="resource-list">
+          <div class="resource-item">
+            <i class="fab fa-js"></i>
+            <div class="resource-info">
+              <h4>Biblioteca de Funções JavaScript</h4>
+              <p>Coleção de funções úteis para usar em nodes de código.</p>
+              <span class="file-type">JS • 15.2 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('js-library')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-cogs"></i>
+            <div class="resource-info">
+              <h4>Expressões Regulares Úteis</h4>
+              <p>Regex patterns para validação e manipulação de dados.</p>
+              <span class="file-type">TXT • 3.4 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('regex-patterns')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-database"></i>
+            <div class="resource-info">
+              <h4>Scripts SQL para Integração</h4>
+              <p>Queries e procedures para integração com bancos de dados.</p>
+              <span class="file-type">SQL • 8.7 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('sql-scripts')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-category">
+        <div class="category-header">
+          <i class="fas fa-book"></i>
+          <h3>Documentação e Guias</h3>
+        </div>
+        <div class="resource-list">
+          <div class="resource-item">
+            <i class="fas fa-file-pdf"></i>
+            <div class="resource-info">
+              <h4>Guia Completo de Referência</h4>
+              <p>Manual completo com todos os nodes e suas configurações.</p>
+              <span class="file-type">PDF • 12.5 MB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('reference-guide')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-list-alt"></i>
+            <div class="resource-info">
+              <h4>Checklist de Boas Práticas</h4>
+              <p>Lista de verificação para criar workflows eficientes e seguros.</p>
+              <span class="file-type">PDF • 2.1 MB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('best-practices')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-bug"></i>
+            <div class="resource-info">
+              <h4>Guia de Troubleshooting</h4>
+              <p>Soluções para problemas comuns e técnicas de debug.</p>
+              <span class="file-type">PDF • 4.3 MB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('troubleshooting')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-category">
+        <div class="category-header">
+          <i class="fas fa-tools"></i>
+          <h3>Ferramentas e Utilitários</h3>
+        </div>
+        <div class="resource-list">
+          <div class="resource-item">
+            <i class="fas fa-file-excel"></i>
+            <div class="resource-info">
+              <h4>Planilha de Planejamento de Workflows</h4>
+              <p>Template para documentar e planejar seus workflows.</p>
+              <span class="file-type">XLSX • 245 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('workflow-planner')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-palette"></i>
+            <div class="resource-info">
+              <h4>Tema Personalizado para n8n</h4>
+              <p>CSS personalizado para uma interface mais moderna.</p>
+              <span class="file-type">CSS • 18.9 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('custom-theme')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <div class="resource-item">
+            <i class="fas fa-server"></i>
+            <div class="resource-info">
+              <h4>Docker Compose para Produção</h4>
+              <p>Configuração completa para deploy em produção com Docker.</p>
+              <span class="file-type">YML • 1.2 KB</span>
+            </div>
+            <button class="download-btn" onclick="downloadResource('docker-compose')">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="links-section">
+      <h3><i class="fas fa-external-link-alt"></i> Links Úteis</h3>
+      <div class="links-grid">
+        <div class="link-card">
+          <i class="fas fa-home"></i>
+          <h4>Site Oficial do n8n</h4>
+          <p>Documentação oficial e recursos</p>
+          <a href="https://n8n.io" target="_blank" class="link-btn">Visitar</a>
+        </div>
+        <div class="link-card">
+          <i class="fab fa-github"></i>
+          <h4>Repositório no GitHub</h4>
+          <p>Código fonte e issues</p>
+          <a href="https://github.com/n8n-io/n8n" target="_blank" class="link-btn">Visitar</a>
+        </div>
+        <div class="link-card">
+          <i class="fab fa-discord"></i>
+          <h4>Comunidade Discord</h4>
+          <p>Chat com outros usuários</p>
+          <a href="https://discord.gg/n8n" target="_blank" class="link-btn">Participar</a>
+        </div>
+        <div class="link-card">
+          <i class="fab fa-youtube"></i>
+          <h4>Canal no YouTube</h4>
+          <p>Vídeos e tutoriais</p>
+          <a href="https://youtube.com/@n8n-io" target="_blank" class="link-btn">Assistir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="download-all-section">
+      <h3><i class="fas fa-archive"></i> Download Completo</h3>
+      <p>Baixe todos os recursos do curso em um único arquivo compactado.</p>
+      <button class="btn-download-all" onclick="downloadAll()">
+        <i class="fas fa-download"></i>
+        Baixar Todos os Recursos (45.2 MB)
+      </button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><i class="fas fa-graduation-cap"></i> Curso n8n - Automação Profissional | Recursos Complementares</p>
+  </div>
+
+  <script>
+    function downloadResource(resourceId) {
+      const button = event.target.closest('.download-btn');
+      const originalHTML = button.innerHTML;
+      
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+      button.disabled = true;
+      
+      // Simulate download
+      setTimeout(() => {
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        button.style.background = '#28a745';
+        
+        setTimeout(() => {
+          button.innerHTML = originalHTML;
+          button.style.background = '';
+          button.disabled = false;
+        }, 2000);
+        
+        // Show download notification
+        showNotification(`Recurso baixado com sucesso!`);
+      }, 1500);
+    }
+
+    function downloadAll() {
+      const button = event.target;
+      const originalHTML = button.innerHTML;
+      
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparando download...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        button.innerHTML = '<i class="fas fa-check"></i> Download Concluído!';
+        button.style.background = '#28a745';
+        
+        setTimeout(() => {
+          button.innerHTML = originalHTML;
+          button.style.background = '';
+          button.disabled = false;
+        }, 3000);
+        
+        showNotification('Todos os recursos foram baixados com sucesso!');
+      }, 3000);
+    }
+
+    function showNotification(message) {
+      const notification = document.createElement('div');
+      notification.className = 'notification';
+      notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.remove();
+      }, 4000);
+    }
+  </script>
+
+  <style>
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .resource-category {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e9ecef;
+    }
+
+    .category-header i {
+      font-size: 2em;
+      color: #667eea;
+      margin-right: 15px;
+    }
+
+    .category-header h3 {
+      color: #333;
+      margin: 0;
+      font-size: 1.4em;
+    }
+
+    .resource-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .resource-item {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .resource-item:hover {
+      border-color: #667eea;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .resource-item > i {
+      font-size: 2em;
+      color: #667eea;
+      margin-right: 20px;
+      min-width: 50px;
+    }
+
+    .resource-info {
+      flex-grow: 1;
+    }
+
+    .resource-info h4 {
+      color: #333;
+      margin: 0 0 8px 0;
+      font-size: 1.1em;
+    }
+
+    .resource-info p {
+      color: #666;
+      margin: 0 0 8px 0;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    .file-type {
+      background: #e9ecef;
+      color: #666;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+
+    .download-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: 15px;
+    }
+
+    .download-btn:hover {
+      background: #5a67d8;
+      transform: scale(1.05);
+    }
+
+    .download-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .links-section {
+      margin: 50px 0;
+    }
+
+    .links-section h3 {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .link-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .link-card:hover {
+      border-color: #667eea;
+      transform: translateY(-5px);
+    }
+
+    .link-card i {
+      font-size: 3em;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+
+    .link-card h4 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .link-card p {
+      color: #666;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+    }
+
+    .link-btn {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .link-btn:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .download-all-section {
+      background: linear-gradient(135deg, #28a745, #20c997);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .download-all-section h3 {
+      color: white;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .download-all-section p {
+      color: white;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .btn-download-all {
+      background: white;
+      color: #28a745;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-download-all:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-download-all:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #28a745;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .notification i {
+      margin-right: 10px;
+    }
+
+    /* Active menu item */
+    .menu a.active {
+      background: #667eea !important;
+      color: white !important;
+      font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .resource-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .resource-item > i {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .download-btn {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+      }
+    }
+  </style>
+</body>
+</html>

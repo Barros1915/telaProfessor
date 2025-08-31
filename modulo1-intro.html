@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" href="book.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1: Introdução ao n8n - Curso n8n</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="index.html"><i class="fas fa-home" style="font-size:25px;color:lightblue;"></i> Início</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-play-circle" style="font-size:25px;color:lightblue;"></i> Módulo 1: Fundamentos</a>
+        <ul class="submenu"> 
+          <li><a href="modulo1-intro.html" class="active"><i class="fas fa-info-circle"></i> Introdução ao n8n</a></li>
+          <li><a href="modulo1-instalacao.html"><i class="fas fa-download"></i> Instalação</a></li>
+          <li><a href="modulo1-interface.html"><i class="fas fa-desktop"></i> Interface do n8n</a></li>
+          <li><a href="modulo1-conceitos.html"><i class="fas fa-lightbulb"></i> Conceitos Básicos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-cogs" style="font-size:25px;color:lightblue;"></i> Módulo 2: Workflows</a>
+        <ul class="submenu">
+          <li><a href="modulo2-primeiro-workflow.html"><i class="fas fa-plus"></i> Primeiro Workflow</a></li>
+          <li><a href="modulo2-nodes.html"><i class="fas fa-puzzle-piece"></i> Nodes Essenciais</a></li>
+          <li><a href="modulo2-conectores.html"><i class="fas fa-link"></i> Conectores</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-code" style="font-size:25px;color:lightblue;"></i> Módulo 3: Avançado</a>
+        <ul class="submenu">
+          <li><a href="modulo3-javascript.html"><i class="fab fa-js"></i> JavaScript no n8n</a></li>
+          <li><a href="modulo3-apis.html"><i class="fas fa-exchange-alt"></i> APIs e Webhooks</a></li>
+          <li><a href="modulo3-condicionais.html"><i class="fas fa-code-branch"></i> Lógica Condicional</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-project-diagram" style="font-size:25px;color:lightblue;"></i> Módulo 4: Projetos</a>
+        <ul class="submenu">
+          <li><a href="projeto1.html"><i class="fas fa-envelope"></i> Automação de Email</a></li>
+          <li><a href="projeto2.html"><i class="fas fa-share-alt"></i> Integração Redes Sociais</a></li>
+          <li><a href="projeto3.html"><i class="fas fa-database"></i> Sincronização de Dados</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="recursos.html"><i class="fas fa-download" style="font-size:25px;color:lightblue;"></i> Recursos</a>
+      </li>
+      <li>
+        <a href="certificado.html"><i class="fas fa-certificate" style="font-size:25px;color:lightblue;"></i> Certificado</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="lesson-container">
+    <div class="lesson-sidebar">
+      <div class="lesson-progress">
+        <h4><i class="fas fa-tasks"></i> Progresso do Módulo</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 25%"></div>
+        </div>
+        <span class="progress-text">1 de 4 lições concluídas</span>
+      </div>
+
+      <div class="lesson-navigation">
+        <h4><i class="fas fa-list"></i> Navegação</h4>
+        <ul class="lesson-list">
+          <li class="current"><a href="modulo1-intro.html"><i class="fas fa-play-circle"></i> Introdução ao n8n</a></li>
+          <li><a href="modulo1-instalacao.html"><i class="fas fa-download"></i> Instalação</a></li>
+          <li><a href="modulo1-interface.html"><i class="fas fa-desktop"></i> Interface do n8n</a></li>
+          <li><a href="modulo1-conceitos.html"><i class="fas fa-lightbulb"></i> Conceitos Básicos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson-content">
+      <div class="lesson-header">
+        <div class="lesson-meta">
+          <span class="lesson-module">Módulo 1: Fundamentos</span>
+          <span class="lesson-duration"><i class="fas fa-clock"></i> 45 minutos</span>
+        </div>
+        <h1><i class="fas fa-robot"></i> Introdução ao n8n</h1>
+        <p class="lesson-description">Descubra o que é n8n, suas vantagens e como ele pode revolucionar seus processos de automação.</p>
+      </div>
+
+      <div class="lesson-body">
+        <section class="lesson-section">
+          <h2><i class="fas fa-question-circle"></i> O que é n8n?</h2>
+          <p>n8n é uma ferramenta de automação de fluxo de trabalho (workflow) gratuita e de código aberto. Com n8n, você pode conectar diferentes aplicações e serviços para automatizar tarefas repetitivas, criar integrações complexas e construir pipelines de dados poderosos.</p>
+          
+          <div class="info-box">
+            <h4><i class="fas fa-lightbulb"></i> Curiosidade</h4>
+            <p>O nome "n8n" significa "nodemation" - uma combinação de "node" (nó) e "automation" (automação). O "8" representa as 8 letras entre "n" e "n" na palavra "nodemation".</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-star"></i> Principais Vantagens do n8n</h2>
+          <div class="advantages-grid">
+            <div class="advantage-card">
+              <i class="fas fa-code"></i>
+              <h4>Código Aberto</h4>
+              <p>Totalmente gratuito e com código aberto, permitindo customizações ilimitadas.</p>
+            </div>
+            <div class="advantage-card">
+              <i class="fas fa-mouse-pointer"></i>
+              <h4>Interface Visual</h4>
+              <p>Editor drag-and-drop intuitivo para criar workflows sem programação.</p>
+            </div>
+            <div class="advantage-card">
+              <i class="fas fa-plug"></i>
+              <h4>200+ Integrações</h4>
+              <p>Conecte-se com centenas de aplicações populares facilmente.</p>
+            </div>
+            <div class="advantage-card">
+              <i class="fas fa-server"></i>
+              <h4>Self-hosted</h4>
+              <p>Controle total dos seus dados hospedando em sua própria infraestrutura.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-use-case"></i> Casos de Uso Comuns</h2>
+          <div class="use-cases">
+            <div class="use-case">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Automação de Email Marketing</h4>
+                <p>Sincronize leads entre CRM e ferramentas de email, envie campanhas personalizadas automaticamente.</p>
+              </div>
+            </div>
+            <div class="use-case">
+              <i class="fas fa-share-alt"></i>
+              <div>
+                <h4>Gestão de Redes Sociais</h4>
+                <p>Publique conteúdo automaticamente, monitore menções e responda a comentários.</p>
+              </div>
+            </div>
+            <div class="use-case">
+              <i class="fas fa-database"></i>
+              <div>
+                <h4>Sincronização de Dados</h4>
+                <p>Mantenha dados consistentes entre diferentes sistemas e bancos de dados.</p>
+              </div>
+            </div>
+            <div class="use-case">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <h4>Relatórios Automatizados</h4>
+                <p>Gere relatórios automáticos combinando dados de múltiplas fontes.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-video"></i> Vídeo Introdutório</h2>
+          <div class="video-container">
+            <div class="video-placeholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Vídeo: "Primeiros Passos com n8n" (15 minutos)</p>
+              <small>Clique para assistir ao vídeo introdutório</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2><i class="fas fa-tasks"></i> Exercício Prático</h2>
+          <div class="exercise-box">
+            <h4><i class="fas fa-clipboard-check"></i> Tarefa 1: Exploração Inicial</h4>
+            <p>Antes de prosseguir para a instalação, explore o site oficial do n8n e familiarize-se com a documentação:</p>
+            <ol>
+              <li>Visite <strong>n8n.io</strong> e explore a página inicial</li>
+              <li>Navegue pela galeria de templates</li>
+              <li>Identifique 3 integrações que seriam úteis para seu trabalho</li>
+              <li>Anote suas descobertas no caderno de estudos</li>
+            </ol>
+            <button class="btn-complete-task" onclick="completeTask(1)">Marcar como Concluído</button>
+          </div>
+        </section>
+
+        <div class="lesson-navigation-buttons">
+          <a href="index.html" class="btn-prev"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+          <a href="modulo1-instalacao.html" class="btn-next">Próxima Lição: Instalação <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><i class="fas fa-graduation-cap"></i> Curso n8n - Automação Profissional | Lição 1 de 16</p>
+  </div>
+
+  <script>
+    function completeTask(taskNumber) {
+      const button = event.target;
+      button.innerHTML = '<i class="fas fa-check"></i> Concluído!';
+      button.style.background = '#28a745';
+      button.disabled = true;
+      
+      // Update progress (simplified for demo)
+      const progressFill = document.querySelector('.progress-fill');
+      progressFill.style.width = '50%';
+      document.querySelector('.progress-text').textContent = '1 de 4 lições concluídas (50%)';
+    }
+  </script>
+</body>
+</html>
